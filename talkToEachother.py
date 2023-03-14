@@ -2,7 +2,7 @@ from Adafruit_IO import Client, Feed, Data
 import paho.mqtt.client as mqtt 
 import time
 
-broker='10.0.0.147' 
+broker='MY IP HERE' 
 topic_pub = 'angles'
 topic_turn_on='onoroff'
 topic_sub ='myLaptop'
@@ -22,7 +22,7 @@ ADAFRUIT_IO_USERNAME = "swoodberry"
 aio = Client(ADAFRUIT_IO_USERNAME,ADAFRUIT_IO_KEY)
 
 
-fred=mqtt.Client('pythonBoi')
+fred=mqtt.Client('sloan')
 fred.connect(broker)
 fred.subscribe(topic_sub)#connect to myLaptop
 fred.on_message = on_message
